@@ -1,0 +1,641 @@
+/* Reset de estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+
+}
+
+
+/* Estilos para o cabeçalho */
+.cabeça {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 10px 10px 10px 10px red;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cabecalho h2 {
+    font-size: 24px;
+}
+
+#cabecalho ul {
+    list-style-type: none;
+}
+
+#cabecalho ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#cabecalho a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos para o conteúdo principal */
+.container-principal {
+    padding: 20px;
+    border: 30px solid red;
+    box-shadow: inset 10px 10px 10px 10px black;
+    
+}
+
+
+
+
+.f5{
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.texto {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.texto h1 {
+    font-size: 36px;
+}
+
+
+
+.icone{
+    padding: 1px;
+    margin-left: -150px;
+    background-color: green;
+    width: 52px;
+    border-radius: 10px 10px 10px 10px;
+     
+}
+
+
+.icone:hover{
+    background-color: white;
+}
+
+#atualizaraPaginaou{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: red;
+    cursor: pointer;
+    color: white;
+}
+
+#atualizaraPaginaou:hover{
+    background-color: black;
+    padding: 5px;
+}
+
+
+.imagens {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8,
+.img9,
+.img10,
+.img11,
+.img12,
+.img13,
+.img15,
+.img16,
+.img17,
+.img18,
+.img19,
+.img20,
+.img21,
+.img22,
+.img23,
+.img24,
+.img25,
+.img26,
+.img27,
+.img28,
+.img29,
+.img30,
+.img31,
+.img32,
+.img33,
+.img34,
+.img35,
+.img36,
+.img37,
+.img38,
+.img39,
+.img40,
+.img41,
+.img42,
+.img43,
+.img44,
+.img45,
+.img46,
+.img47,
+.img48,
+.img49,
+.img50,
+.img51,
+.img52,
+.img53 {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    
+
+}
+
+
+.img1 :hover,
+.img2 :hover,
+.img3 :hover,
+.img4 :hover,
+.img5 :hover,
+.img6 :hover,
+.img7 :hover,
+.img8 :hover,
+.img9 :hover,
+.img10 :hover,
+.img11 :hover,
+.img12 :hover,
+.img13 :hover,
+.img15 :hover,
+.img16 :hover,
+.img17 :hover,
+.img18 :hover,
+.img19 :hover,
+.img20 :hover,
+.img21 :hover,
+.img22 :hover,
+.img23 :hover,
+.img24 :hover,
+.img25 :hover,
+.img26 :hover,
+.img27 :hover,
+.img28 :hover,
+.img29 :hover,
+.img30 :hover,
+.img31 :hover,
+.img32 :hover,
+.img33 :hover,
+.img34 :hover,
+.img35 :hover,
+.img36 :hover,
+.img37 :hover,
+.img38 :hover,
+.img39 :hover,
+.img40 :hover,
+.img41 :hover,
+.img42 :hover,
+.img43 :hover,
+.img44 :hover,
+.img45 :hover,
+.img46 :hover,
+.img47 :hover,
+.img48 :hover,
+.img49 :hover,
+.img50 :hover,
+.img51 :hover,
+.img52 :hover,
+.img53 :hover {
+    padding: 5px;
+    box-shadow: 5px 5px 5px 5px black;
+    cursor: pointer;
+    
+
+}
+
+
+
+.texto1,
+.texto2,
+.texto3,
+.texto4,
+.texto5,
+.texto6,
+.texto7,
+.texto8,
+.texto9,
+.texto10,
+.texto11,
+.texto12,
+.texto13,
+.texto14,
+.texto15,
+.texto16,
+.texto17,
+.texto18,
+.texto19,
+.texto20,
+.texto21,
+.texto22,
+.texto23,
+.texto24,
+.texto25,
+.texto26,
+.texto27,
+.texto28,
+.texto29,
+.texto30,
+.texto31,
+.texto32,
+.texto33,
+.texto34,
+.texto35,
+.texto36,
+.texto37,
+.texto38,
+.texto39,
+.texto40,
+.texto41,
+.texto42,
+.texto43,
+.texto44,
+.texto45,
+.texto46,
+.texto47,
+.texto48,
+.texto49,
+.texto50,
+.texto51,
+.texto52,
+.texto53 {    
+    padding: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+.texto1 :hover,
+.texto2 :hover,
+.texto3 :hover,
+.texto4 :hover,
+.texto5 :hover,
+.texto6 :hover,
+.texto7 :hover,
+.texto8 :hover,
+.texto9 :hover,
+.texto10 :hover,
+.texto11 :hover,
+.texto12 :hover,
+.texto13 :hover,
+.texto14 :hover,
+.texto15 :hover,
+.texto16 :hover,
+.texto17 :hover,
+.texto18 :hover,
+.texto19 :hover,
+.texto20 :hover,
+.texto21 :hover,
+.texto22 :hover,
+.texto23 :hover,
+.texto24 :hover,
+.texto25 :hover,
+.texto26 :hover,
+.texto27 :hover,
+.texto28 :hover,
+.texto29 :hover,
+.texto30 :hover,
+.texto31 :hover,
+.texto32 :hover,
+.texto33 :hover,
+.texto34 :hover,
+.texto35 :hover,
+.texto36 :hover,
+.texto37 :hover,
+.texto38 :hover,
+.texto39 :hover,
+.texto40 :hover,
+.texto41 :hover,
+.texto42 :hover,
+.texto43 :hover,
+.texto44 :hover,
+.texto45 :hover,
+.texto46 :hover,
+.texto47 :hover,
+.texto48 :hover,
+.texto49 :hover,
+.texto50 :hover,
+.texto51 :hover,
+.texto52 :hover,
+.texto53 :hover{
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px 10px black;
+}
+
+.imagens img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.abertura {
+    font-size: 18px;
+}
+
+.compra1,
+.compra2,
+.compra3,
+.compra4,
+.compra5,
+.compra6,
+.compra7,
+.compra8,
+.compra9,
+.compra10,
+.compra11,
+.compra12,
+.compra13,
+.compra15,
+.compra16,
+.compra17,
+.compra18,
+.compra19,
+.compra20,
+.compra21,
+.compra22,
+.compra23,
+.compra24,
+.compra25,
+.compra26,
+.compra27,
+.compra28,
+.compra29,
+.compra30,
+.compra31,
+.compra32,
+.compra33,
+.compra34,
+.compra35,
+.compra36,
+.compra37,
+.compra38,
+.compra39,
+.compra40,
+.compra41,
+.compra42,
+.compra43,
+.compra44,
+.compra45,
+.compra46,
+.compra47,
+.compra48,
+.compra49,
+.compra50,
+.compra51,
+.compra52,
+.compra53 {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.compra1 a,
+.compra2 a,
+.compra3 a,
+.compra4 a,
+.compra5 a,
+.compra6 a,
+.compra7 a,
+.compra8 a,
+.compra9 a,
+.compra10 a,
+.compra11 a,
+.compra12 a,
+.compra13 a,
+.compra15 a,
+.compra16 a,
+.compra17 a,
+.compra18 a,
+.compra19 a,
+.compra20 a,
+.compra21 a,
+.compra22 a,
+.compra23 a,
+.compra24 a,
+.compra25 a,
+.compra26 a,
+.compra27 a,
+.compra28 a,
+.compra29 a,
+.compra30 a,
+.compra31 a,
+.compra32 a,
+.compra33 a,
+.compra34 a,
+.compra35 a,
+.compra36 a,
+.compra37 a,
+.compra38 a,
+.compra39 a,
+.compra40 a,
+.compra41 a,
+.compra42 a,
+.compra43 a,
+.compra44 a,
+.compra45 a,
+.compra46 a,
+.compra47 a,
+.compra48 a,
+.compra49 a,
+.compra50 a,
+.compra51 a,
+.compra52 a,
+.compra53 a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.compra1 a:hover,
+.compra2 a:hover,
+.compra3 a:hover,
+.compra4 a:hover,
+.compra5 a:hover,
+.compra6 a:hover,
+.compra7 a:hover,
+.compra8 a:hover,
+.compra9 a:hover,
+.compra10 a:hover,
+.compra11 a:hover,
+.compra12 a:hover,
+.compra13 a:hover,
+.compra15 a:hover,
+.compra16 a:hover,
+.compra17 a:hover,
+.compra18 a:hover,
+.compra19 a:hover,
+.compra20 a:hover,
+.compra21 a:hover,
+.compra22 a:hover,
+.compra23 a:hover,
+.compra24 a:hover,
+.compra25 a:hover,
+.compra26 a:hover,
+.compra27 a:hover,
+.compra28 a:hover,
+.compra29 a:hover,
+.compra30 a:hover,
+.compra31 a:hover,
+.compra32 a:hover,
+.compra33 a:hover,
+.compra34 a:hover,
+.compra35 a:hover,
+.compra36 a:hover,
+.compra37 a:hover,
+.compra38 a:hover,
+.compra39 a:hover,
+.compra40 a:hover,
+.compra41 a:hover,
+.compra42 a:hover,
+.compra43 a:hover,
+.compra44 a:hover,
+.compra45 a:hover,
+.compra46 a:hover,
+.compra47 a:hover,
+.compra48 a:hover,
+.compra49 a:hover,
+.compra50 a:hover,
+.compra51 a:hover,
+.compra52 a:hover,
+.compra53 a:hover {
+    position: relative;
+    background-color: black;
+    padding: 10px;
+    box-shadow: 10px 10px 10px 10px red;
+}
+
+/* Estilos para o rodapé */
+#rodape {
+
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 10px 10px 10px 10px red;
+}
+
+#rodape h6 {
+    margin: 0;
+}
+
+
+.politica {
+    text-align: center;
+    background-color: red;
+    font-size: 20px;
+}
+
+.politica a {
+    color: #fff;
+}
+.politica a:hover {
+    color: black;
+}
+
+
+.container {
+    text-align: justify;
+    margin-top: 20px;
+
+}
+
+.bloco-texto {
+    font-size: 18px;
+    margin-top: 18px;
+
+}
+
+/* Estilo mobile */
+@media only screen and (max-width: 800px) {
+    .container {
+        padding: 0 5px;
+    }
+
+    #cabecalho ul li {
+        margin-right: 5px;
+    }
+
+    .imagens {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 5px;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+
+    .texto h1{
+        font-size: 16px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .icone{
+        margin-left: -60px;
+    }
+
+    .compra {
+        display: block;
+        float: right;
+        margin: -15px 0 5px 0;
+        font-size: 4px;
+        color: white;
+        
+    }
+
+    .container-principal{
+         width: 470px;
+         margin-left: -20px;
+         justify-content: center;
+         align-items: center;
+    }
+
+    .texto {
+        font-size: 4px;
+        margin: 5px 0;
+    }
+
+    #rodape h6, #rodape p, .politica {
+        font-size: 8px;
+    }
+}
