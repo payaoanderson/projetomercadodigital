@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,100&family=Poppins:wght@500&family=Vina+Sans&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('./css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('../css/main.css')}}">
 
 
     <title>Mercado Digital</title>
