@@ -20,7 +20,7 @@
     
     <main class="container-principal">
         
-   @include('includes.conteudoprincipal')
+   @extends('layout.conteudoprincipal')
 
     </main>
 
