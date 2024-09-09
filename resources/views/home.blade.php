@@ -2,25 +2,13 @@
 
 @include('includes.cabeca')
 
-
-
-
-    
-
-
-
-    
-
-
-
-
-    @include('includes.cabecalho')
+@include('includes.cabecalho')
     
 
     
     <main class="container-principal">
         
-   @extends('layout.conteudoprincipal')
+   @include('includes.conteudoprincipal')
 
     </main>
 
@@ -29,7 +17,7 @@
 
     <div class="politica">
 
-    <a href="politicadeprivacidade.html">Politica de privacidade</a>
+    <a href="{{route('politica')}}">Politica de privacidade</a>
     </div>
 
 

@@ -12,7 +12,7 @@
                 <div class="bloco-texto2">
                     <ul>
                         <li>
-                            <a href="index.html">Mercado Digital</a>
+                            <a href="{{route('home.index')}}">Mercado Digital</a>
                         </li>
                     </ul>
                 </div>
