@@ -5,11 +5,16 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CompraController;
+use App\Http\Controllers\RelatorioController;
+use App\Http\Controllers\VendaController;
+use App\Http\Controllers\MoreOptionController;
+
 
 
 //site
 
-Route::get('/index', [SiteController::class, 'index'])->name('home.index');
+Route::get('/', [SiteController::class, 'home'])->name('home.index');
+Route::get('/politica', [SiteController::class, 'politica'])->name('politica');
 
 
 
@@ -21,12 +26,6 @@ Route::post('/users', [UserController::class, 'store'])->name('users.store');
 Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
 Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
 Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
-
-
-
-
-
-
 
 // Rotas protegidas por autenticação
 //Route::middleware(['auth'])->group(function () {
@@ -45,16 +44,58 @@ Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.
     Route::delete('/produtos/{produto}', [ProdutoController::class, 'destroy'])->name('produtos.destroy'); // Deletar produto
 //});
 
-///admin compras
+///admin vendas
+
+Route::resource('vendas', VendaController::class);
+
+Route::get('/vendas', [VendaController::class, 'index'])->name('vendas.index');
+Route::get('/vendas/create', [VendaController::class, 'create'])->name('vendas.create');
+Route::post('/vendas', [VendaController::class, 'store'])->name('vendas.store');
+Route::get('/vendas/{venda}/edit', [VendaController::class, 'edit'])->name('vendas.edit');
+Route::put('/vendas/{venda}', [VendaController::class, 'update'])->name('vendas.update');
+Route::delete('/vendas/{venda}', [VendaController::class, 'destroy'])->name('vendas.destroy');
+
+
+//admin compras
+
+
+Route::resource('compras', CompraController::class);
+    Route::get('/compras', [CompraController::class, 'index'])->name('compras.index');        // Lista de compras
+    Route::get('/create', [CompraController::class, 'create'])->name('compras.create'); // Formulário de criação
+    Route::post('/', [CompraController::class, 'store'])->name('compras.store');        // Salvar nova compra
+    Route::get('/{compra}/edit', [CompraController::class, 'edit'])->name('compras.edit'); // Formulário de edição
+    Route::put('/{compra}', [CompraController::class, 'update'])->name('compras.update'); // Atualizar compra
+    Route::delete('/{compra}', [CompraController::class, 'destroy'])->name('compras.destroy'); // Excluir compra
 
 
 
-Route::get('/compras', [CompraController::class, 'index'])->name('compras.index');       // Listar todas as compras
-Route::get('/compras/create', [CompraController::class, 'create'])->name('compras.create');  // Formulário para criar nova compra
-Route::post('/compras', [CompraController::class, 'store'])->name('compras.store');         // Salvar nova compra
-Route::get('/compras/{compra}/edit', [CompraController::class, 'edit'])->name('compras.edit'); // Formulário para editar compra
-Route::put('/compras/{compra}', [CompraController::class, 'update'])->name('compras.update');  // Atualizar compra existente
-Route::delete('/compras/{compra}', [CompraController::class, 'destroy'])->name('compras.destroy'); // Excluir compra existente
+
+
+    // CRUD de Relatórios
+
+    Route::resource('relatorios', RelatorioController::class);
+    Route::get('/relatorios', [RelatorioController::class, 'index'])->name('relatorios.index');
+    Route::get('/relatorios/create', [RelatorioController::class, 'create'])->name('relatorios.create');
+    Route::post('/relatorios', [RelatorioController::class, 'store'])->name('relatorios.store');
+    Route::get('/relatorios/{relatorio}/edit', [RelatorioController::class, 'edit'])->name('relatorios.edit');
+    Route::put('/relatorios/{relatorio}', [RelatorioController::class, 'update'])->name('relatorios.update');
+    Route::delete('/relatorios/{relatorio}', [RelatorioController::class, 'destroy'])->name('relatorios.destroy');
+
+//mais opçoes
+Route::resource('more_options', MoreOptionController::class);
+
+
+Route::get('/more_options', [MoreOptionController::class, 'index'])->name('more_options.index');
+Route::get('/more_options/create', [MoreOptionController::class, 'create'])->name('more_options.create');
+Route::post('/more_options', [MoreOptionController::class, 'store'])->name('more_options.store');
+Route::get('/more_options/{moreOption}/edit', [MoreOptionController::class, 'edit'])->name('more_options.edit');
+Route::put('/more_options/{moreOption}', [MoreOptionController::class, 'update'])->name('more_options.update');
+Route::delete('/more_options/{moreOption}', [MoreOptionController::class, 'destroy'])->name('more_options.destroy');
+
+// Rotas para Ajuda e Suporte
+Route::get('/help', [MoreOptionController::class, 'help'])->name('more_options.help');
+Route::get('/support', [MoreOptionController::class, 'support'])->name('more_options.support');
+
 
 
 
