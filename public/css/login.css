@@ -1,0 +1,39 @@
+/* Exemplo de CSS para estilizar os botões de login e registro */
+.login-registro {
+    margin-left: auto; /* Alinha à direita */
+}
+
+.login-registro ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.login-registro li {
+    display: inline;
+}
+
+.login-registro .btn {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.login-registro .btn-primary {
+    background-color: #007bff; /* Cor do botão de login */
+}
+
+.login-registro .btn-primary:hover {
+    background-color: #0056b3; /* Cor do botão de login ao passar o mouse */
+}
+
+.login-registro .btn-secondary {
+    background-color: #6c757d; /* Cor do botão de registrar */
+}
+
+.login-registro .btn-secondary:hover {
+    background-color: #5a6268; /* Cor do botão de registrar ao passar o mouse */
+}

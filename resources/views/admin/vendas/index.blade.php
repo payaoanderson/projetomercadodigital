@@ -40,5 +40,7 @@
             @endforeach
         </tbody>
     </table>
+
+    {{ $vendas->links('vendor.pagination.numeric') }}
 </div>
 @endsection

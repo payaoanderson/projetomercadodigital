@@ -10,4 +10,9 @@ class Compra extends Model
     use HasFactory;
 
     protected $fillable = ['produto', 'quantidade', 'preco', 'data_compra'];
+
+    public function produto()
+    {
+        return $this->belongsTo(Produto::class);
+    }
 }

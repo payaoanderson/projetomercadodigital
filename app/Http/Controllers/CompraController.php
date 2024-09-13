@@ -9,12 +9,10 @@ use Illuminate\Http\Request;
 class CompraController extends Controller
 {
     // Listar todas as compras
-    public function index()
-    {
-        $compras = Compra::paginate(10);  // Paginação de 10 itens
+    public function index() {
+        $compras = Compra::with('produto')->paginate(10);
         return view('admin.compras.index', compact('compras'));
     }
-
     // Exibir formulário de criação
     public function create()
     {

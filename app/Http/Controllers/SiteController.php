@@ -17,4 +17,9 @@ class SiteController extends Controller
     public function politica(){
       return view('/politica');
     }
+
+
+    public function template(){
+      return view('template');
+    }
 }

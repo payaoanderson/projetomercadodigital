@@ -8,8 +8,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <div class="container-fluid">
+<body class="d-flex flex-column min-vh-100">
+    <div class="container-fluid flex-grow-1">
         <div class="row">
             <!-- Menu Lateral -->
             <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
@@ -45,36 +45,50 @@
                                 <i class="fas fa-chart-line"></i> Relatórios
                             </a>
                         </li>
-                        
-                        <!-- Dropdown para outras opções -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-ellipsis-h"></i> Mais opções
+            
+                        <!-- Links de Ajuda e Suporte -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('more_options.help') }}">
+                                <i class="fas fa-question-circle"></i> Ajuda
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('more_options.help') }}"><i class="fas fa-question-circle"></i> Ajuda</a>
-                                <a class="dropdown-item" href="{{ route('more_options.support') }}"><i class="fas fa-life-ring"></i> Suporte</a>
-                            </div>
                         </li>
-                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('more_options.support') }}">
+                                <i class="fas fa-life-ring"></i> Suporte
+                            </a>
+                        </li>
+            
                         <!-- Seção de perfil -->
                         <li class="nav-item mt-3">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('user_profiles.index') }}">
                                 <i class="fas fa-user"></i> Perfil
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{ route('home.index') }}">
                                 <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </li>
+                        <!-- Link de Registrar -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">
+                                <i class="fas fa-user-plus"></i> Registrar
                             </a>
                         </li>
                     </ul>
                 </div>
             </nav>
-
             <!-- Conteúdo Principal -->
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                @yield('content')
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 d-flex flex-column">
+                <!-- Área de Conteúdo -->
+                <div class="flex-grow-1">
+                    @yield('content')
+                </div>
+
+                <!-- Rodapé -->
+                <footer class="bg-dark text-center text-white py-3 mt-auto">
+                    @include('includes.rodape')
+                </footer>
             </main>
         </div>
     </div>

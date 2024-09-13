@@ -6,7 +6,7 @@
 
     <div class="card">
         <div class="card-body">
-            <p>Para suporte técnico, por favor, entre em contato com nossa equipe de suporte pelo e-mail <strong>suporte@exemplo.com</strong>.</p>
+            <p>Para suporte técnico, por favor, entre em contato com nossa equipe de suporte pelo e-mail <strong>digitalmercado@mercadodigitalstore.com</strong>.</p>
             <p>Estamos disponíveis para ajudar com qualquer dúvida ou problema que você possa ter.</p>
         </div>
     </div>

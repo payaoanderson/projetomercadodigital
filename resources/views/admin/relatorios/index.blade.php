@@ -47,6 +47,6 @@
         </tbody>
     </table>
 
-    {{ $relatorios->links() }}
+    {{ $relatorios->links('vendor.pagination.numeric') }}
 </div>
 @endsection
