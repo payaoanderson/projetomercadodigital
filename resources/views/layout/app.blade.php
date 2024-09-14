@@ -58,23 +58,40 @@
                             </a>
                         </li>
             
-                        <!-- Seção de perfil -->
-                        <li class="nav-item mt-3">
-                            <a class="nav-link" href="{{ route('user_profiles.index') }}">
-                                <i class="fas fa-user"></i> Perfil
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home.index') }}">
-                                <i class="fas fa-sign-out-alt"></i> Logout
-                            </a>
-                        </li>
-                        <!-- Link de Registrar -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">
-                                <i class="fas fa-user-plus"></i> Registrar
-                            </a>
-                        </li>
+                        <!-- Seção de usuário autenticado -->
+                        @auth
+                            <!-- Exibir informações do usuário logado -->
+                            <li class="nav-item">
+                                <p class="nav-link">
+                                    <i class="fas fa-user"></i> {{ Auth::user()->name }}
+                                </p>
+                                <p class="nav-link">
+                                    <small>{{ Auth::user()->email }}</small>
+                                </p>
+                            </li>
+            
+                            <!-- Link de Logout -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('login')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
+                        @else
+                            <!-- Se o usuário não estiver autenticado, mostrar Login e Registrar -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">
+                                    <i class="fas fa-sign-in-alt"></i> Login
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">
+                                    <i class="fas fa-user-plus"></i> Registrar
+                                </a>
+                            </li>
+                        @endauth
                     </ul>
                 </div>
             </nav>

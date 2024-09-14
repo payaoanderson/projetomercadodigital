@@ -8,7 +8,7 @@
 
 
     <div class="img1">
-        <img src="{{asset("./img/1.png")}}" alt="img1" width="150">
+        <img src="./img/1.png" alt="img1" width="150">
     </div>
     <div class="texto1">
         <h5 class="abertura1">32 videos milionarios</h5>
@@ -19,7 +19,7 @@
 
      
     <div class="img2">
-        <img src="{{asset("./img/2.png")}}" alt="img1" width="150">
+        <img src="./img/2.png" alt="img1" width="150">
     </div>
     <div class="texto2">
         <h5 class="abertura2">BLILHE ME 2024
@@ -31,7 +31,7 @@
 
 
     <div class="img3">
-        <img src="{{asset("./img/3.png")}}" alt="img1" width="150">
+        <img src="./img/3.png" alt="img1" width="150">
     </div>
     <div class="texto3">
         <h5 class="abertura3">COMO SE TORNAR MILIONARIO
@@ -43,7 +43,7 @@
     </div>
 
     <div class="img4">
-        <img src="{{asset("./img/4.png")}}" alt="img1" width="150">
+        <img src="./img/4.png" alt="img1" width="150">
     </div>
     <div class="texto4">
         <h5 class="abertura4">EMPREEMDEDORISMO</h5>
@@ -53,7 +53,7 @@
     </div>
 
     <div class="img5">
-        <img src="{{asset("./img/5.png")}}" alt="img1" width="150">
+        <img src="./img/5.png" alt="img1" width="150">
     </div>
     <div class="texto5">
         <h5 class="abertura5">RECEITAS PRA
@@ -66,7 +66,7 @@
 
 
     <div class="img6">
-        <img src="{{asset("./img/6.png")}}" alt="img1" width="150">
+        <img src="./img/6.png" alt="img1" width="150">
     </div>
     <div class="texto6">
         <h5 class="abertura6">INFORMATICA BASICA</h5>
@@ -77,7 +77,7 @@
 
 
     <div class="img7">
-        <img src="{{asset("./img/7.png")}}" alt="img1" width="150">
+        <img src="./img/7.png" alt="img1" width="150">
     </div>
     <div class="texto7">
         <h5 class="abertura7">DOMINIOS</h5>
@@ -87,7 +87,7 @@
     </div>
 
     <div class="img8">
-        <img src="{{asset("./img/8.png")}}" alt="img1" width="150">
+        <img src="./img/8.png" alt="img1" width="150">
     </div>
     <div class="texto8">
         <h5 class="abertura8">INVESTIMENTOS</h5>
@@ -97,7 +97,7 @@
     </div>
 
     <div class="img9">
-        <img src="{{asset("./img/9.png")}}" alt="img1" width="150">
+        <img src="./img/9.png" alt="img1" width="150">
     </div>
     <div class="texto9">
         <h5 class="abertura9">PAGINA DE PLR COMO <br> FAZER UMA</h5>
@@ -108,7 +108,7 @@
 
 
     <div class="img10">
-        <img src="{{asset("./img/10.png")}}" alt="img1" width="150">
+        <img src="./img/10.png" alt="img1" width="150">
     </div>
     <div class="texto10">
         <h5 class="abertura10">200 PROMTS CHAT GPT </h5>
@@ -119,7 +119,7 @@
 
 
     <div class="img11">
-        <img src="{{asset("./img/11.png")}}" alt="img1" width="150">
+        <img src="./img/11.png" alt="img1" width="150">
     </div>
     <div class="texto11">
         <h5 class="abertura11">ESTRATEGIAS DE VENDAS</h5>
@@ -131,7 +131,7 @@
 
 
     <div class="img12">
-        <img src="{{asset("./img/12.jpeg")}}" alt="img1" width="150">
+        <img src="./img/12.jpeg" alt="img1" width="150">
     </div>
     <div class="texto12">
         <h5 class="abertura12">EMAGRECER EM 60 DIAS</h5>
@@ -143,7 +143,7 @@
 
 
     <div class="img13">
-        <img src="{{asset("./img/13.png")}}" alt="" width="150">
+        <img src="./img/13.png" alt="" width="150">
     </div>
     <div class="texto13">
         <h5 class="abertura13">SE TORNANDO UM MILIONARIO
@@ -156,7 +156,7 @@
 
 
     <div class="img15">
-        <img src="{{asset("./img/15.jpeg")}}" alt="" width="150">
+        <img src="./img/15.jpeg" alt="" width="150">
     </div>
     <div class="texto15">
         <h5 class="abertura15">Marketing Digital
@@ -167,7 +167,7 @@
     </div>
 
     <div class="img16">
-        <img src="{{asset("./img/16.jpeg")}}" alt="" width="150">
+        <img src="./img/16.jpeg" alt="" width="150">
     </div>
     <div class="texto16">
         <h5 class="abertura16">Depressão: Como Evitar e Como Ser Curado
@@ -178,7 +178,7 @@
     </div>
 
     <div class="img17">
-        <img src="{{asset("./img/17.jpg")}}" alt="" width="150">
+        <img src="./img/17.jpg" alt="" width="150">
     </div>
     <div class="texto17">
         <h5 class="abertura17">Entendendo e Superando a Ansiedade
@@ -189,7 +189,7 @@
     </div>
 
     <div class="img18">
-        <img src="{{asset("./img/18.jpeg")}}" alt="" width="150">
+        <img src="./img/18.jpeg" alt="" width="150">
     </div>
     <div class="texto18">
         <h5 class="abertura18">Guia Completo de Marketing Digital
@@ -201,7 +201,7 @@
 
 
     <div class="img19">
-        <img src="{{asset("./img/19.jpeg")}}" alt="" width="150">
+        <img src="./img/19.jpeg" alt="" width="150">
     </div>
     <div class="texto19">
         <h5 class="abertura19">Estratégias de Redes Sociais
@@ -214,7 +214,7 @@
 
 
     <div class="img20">
-        <img src="{{asset("./img/20.jpeg")}}" alt="" width="150">
+        <img src="./img/20.jpeg" alt="" width="150">
     </div>
     <div class="texto20">
         <h5 class="abertura20">Manual do Empreendedor Online
@@ -227,7 +227,7 @@
 
 
     <div class="img21">
-        <img src="{{asset("./img/21.png")}}" alt="" width="150">
+        <img src="./img/21.png" alt="" width="150">
     </div>
     <div class="texto21">
         <h5 class="abertura21">SEO Avançado: Guia Completo para Melhorar seu Ranking
@@ -239,7 +239,7 @@
     
     
     <div class="img22">
-        <img src="{{asset("./img/22.jpeg")}}" alt="" width="150">
+        <img src="./img/22.jpeg" alt="" width="150">
     </div>
     <div class="texto22">
         <h5 class="abertura22">Segredos do Email Marketing
@@ -252,7 +252,7 @@
  
  
     <div class="img23">
-        <img src="{{asset("./img/23.jpeg")}}" alt="" width="150">
+        <img src="./img/23.jpeg" alt="" width="150">
     </div>
     <div class="texto23">
         <h5 class="abertura23">Receitas Saudáveis para Todos os Dias
@@ -266,7 +266,7 @@
     
     
     <div class="img24">
-        <img src="{{asset("./img/24.jpeg")}}" alt="" width="150">
+        <img src="./img/24.jpeg" alt="" width="150">
     </div>
     <div class="texto24">
         <h5 class="abertura24">Guia de Fitness em Casa
@@ -282,7 +282,7 @@
     
     
     <div class="img25">
-        <img src="{{asset("./img/25.jpeg")}}" alt="" width="150">
+        <img src="./img/25.jpeg" alt="" width="150">
     </div>
     <div class="texto25">
         <h5 class="abertura25">Meditação e Bem-Estar
@@ -294,7 +294,7 @@
     
     
     <div class="img26">
-        <img src="{{asset("./img/26.jpeg")}}" alt="" width="150">
+        <img src="./img/26.jpeg" alt="" width="150">
     </div>
     <div class="texto26">
         <h5 class="abertura26">Curso de Fotografia para Iniciantes
@@ -306,7 +306,7 @@
   
   
     <div class="img27">
-        <img src="{{asset("./img/27.png")}}" alt="" width="150">
+        <img src="./img/27.png" alt="" width="150">
     </div>
     <div class="texto27">
         <h5 class="abertura27">Manual de Finanças Pessoais
@@ -318,7 +318,7 @@
     
     
     <div class="img28">
-        <img src="{{asset("./img/28.jpeg")}}" alt="" width="150">
+        <img src="./img/28.jpeg" alt="" width="150">
     </div>
     <div class="texto28">
         <h5 class="abertura28">500 Videos Pack + Lifestyle Milionários: Sua Jornada para o Sucesso
@@ -330,7 +330,7 @@
    
    
     <div class="img29">
-        <img src="{{asset("./img/29.jpeg")}}" alt="" width="150">
+        <img src="./img/29.jpeg" alt="" width="150">
     </div>
     <div class="texto29">
         <h5 class="abertura29">Ebook de Desenvolvimento Pessoal
@@ -345,7 +345,7 @@
 
 
     <div class="img30">
-        <img src="{{asset("./img/30.jpeg")}}" alt="" width="150">
+        <img src="./img/30.jpeg" alt="" width="150">
     </div>
     <div class="texto30">
         <h5 class="abertura30">Guia de Viagem Econômica
@@ -357,7 +357,7 @@
    
    
     <div class="img31">
-        <img src="{{asset("./img/31.jpeg")}}" alt="" width="150">
+        <img src="./img/31.jpeg" alt="" width="150">
     </div>
     <div class="texto31">
         <h5 class="abertura31">Curso de Design Gráfico
@@ -368,7 +368,7 @@
     </div>
 
     <div class="img32">
-        <img src="{{asset("./img/32.jpeg")}}" alt="" width="150">
+        <img src="./img/32.jpeg" alt="" width="150">
     </div>
     <div class="texto32">
         <h5 class="abertura32">Receitas Veganas Deliciosas
@@ -379,7 +379,7 @@
     </div>
 
     <div class="img34">
-        <img src="{{asset("./img/34.jpeg")}}" alt="" width="150">
+        <img src="./img/34.jpeg" alt="" width="150">
     </div>
     <div class="texto34">
         <h5 class="abertura34">Guia de Alimentação Balanceada
@@ -391,7 +391,7 @@
     
     
     <div class="img35">
-        <img src="{{asset("./img/35.png")}}" alt="" width="150">
+        <img src="./img/35.png" alt="" width="150">
     </div>
     <div class="texto35">
         <h5 class="abertura35">Curso de Programação para Iniciantes         
@@ -402,7 +402,7 @@
     </div>
 
     <div class="img36">
-        <img src="{{asset("./img/36.jpeg")}}" alt="" width="150">
+        <img src="./img/36.jpeg" alt="" width="150">
     </div>
     <div class="texto36">
         <h5 class="abertura36">Curso de Canvas para Iniciantes         
@@ -413,7 +413,7 @@
     </div>
    
     <div class="img37">
-        <img src="{{asset("./img/37.jpeg")}}" alt="" width="150">
+        <img src="./img/37.jpeg" alt="" width="150">
     </div>
     <div class="texto37">
         <h5 class="abertura37">Técnicas Avançadas de Redação         
@@ -424,7 +424,7 @@
     </div>
    
     <div class="img38">
-        <img src="{{asset("./img/38.jpeg")}}" alt="" width="150">
+        <img src="./img/38.jpeg" alt="" width="150">
     </div>
     <div class="texto38">
         <h5 class="abertura38">Como Criar um Blog de Sucesso       
@@ -437,7 +437,7 @@
 
 
     <div class="img39">
-        <img src="{{asset("./img/39.jpeg")}}" alt="" width="150">
+        <img src="./img/39.jpeg" alt="" width="150">
     </div>
     <div class="texto39">
         <h5 class="abertura39">Guia de Marketing de Afiliados       
@@ -448,8 +448,8 @@
     </div>
    
     <div class="img40">
-        <img src="{{asset("./img/40.jpeg")}}" alt="" width="150">
-    </div>,
+        <img src="{{asset('./img/40.jpeg')}}" alt="" width="150">
+    </div>
     <div class="texto40">
         <h5 class="abertura40">Curso de Autoconfiança e Motivação       
     </div>
@@ -459,7 +459,7 @@
     </div>
    
     <div class="img41">
-        <img src="{{asset("./img/41.jpeg")}}" alt="" width="150">
+        <img src="./img/41.jpeg" alt="" width="150">
     </div>
     <div class="texto41">
         <h5 class="abertura41">Técnicas de Vendas Eficazes       
@@ -470,7 +470,7 @@
     </div>
    
     <div class="img42">
-        <img src="{{asset("./img/42.jpeg")}}" alt="" width="150">
+        <img src="./img/42.jpeg" alt="" width="150">
     </div>
     <div class="texto42">
         <h5 class="abertura42">Manual de Desenvolvimento Web       
@@ -481,7 +481,7 @@
     </div>
    
     <div class="img43">
-        <img src="{{asset("./img/43.jpeg")}}" alt="" width="150">
+        <img src="./img/43.jpeg" alt="" width="150">
     </div>
     <div class="texto43">
         <h5 class="abertura43">Guia de Productividade no Trabalho      
@@ -492,7 +492,7 @@
     </div>
    
     <div class="img44">
-        <img src="{{asset("./img/44.jpeg")}}" alt="" width="150">
+        <img src="./img/44.jpeg" alt="" width="150">
     </div>
     <div class="texto44">
         <h5 class="abertura44">Receitas de Sobremesas Rápidas
@@ -503,7 +503,7 @@
     </div>
    
     <div class="img45">
-        <img src="{{asset("./img/45.jpeg")}}" alt="" width="150">
+        <img src="./img/45.jpeg" alt="" width="150">
     </div>
     <div class="texto45">
         <h5 class="abertura45">Curso de Pintura para Iniciantes           
@@ -514,7 +514,7 @@
     </div>
    
     <div class="img46">
-        <img src="{{asset("./img/46.jpeg")}}" alt="" width="150">
+        <img src="./img/46.jpeg" alt="" width="150">
     </div>
     <div class="texto46">
         <h5 class="abertura46">Estratégias de Crescimento no Instagram           
@@ -525,7 +525,7 @@
     </div>
    
     <div class="img47">
-        <img src="{{asset("./img/47.jpeg")}}" alt="" width="150">
+        <img src="./img/47.jpeg" alt="" width="150">
     </div>
     <div class="texto47">
         <h5 class="abertura47">Manual de Gestão de Tempo           
@@ -536,7 +536,7 @@
     </div>
    
     <div class="img48">
-        <img src="{{asset("./img/48.png")}}" alt="" width="150">
+        <img src="./img/48.png" alt="" width="150">
     </div>
     <div class="texto48">
         <h5 class="abertura48">Curso de Fotografia com Smartphone           
@@ -547,7 +547,7 @@
     </div>
    
     <div class="img49">
-        <img src="{{asset("./img/49.jpeg")}}" alt="" width="150">
+        <img src="./img/49.jpeg" alt="" width="150">
     </div>
     <div class="texto49">
         <h5 class="abertura49">Guia de Saúde Mental           
@@ -559,7 +559,7 @@
    
 
     <div class="img50">
-        <img src="{{asset("./img/50.jpeg")}}" alt="" width="150">
+        <img src="./img/50.jpeg" alt="" width="150">
     </div>
     <div class="texto50">
         <h5 class="abertura50">Transforme Seu Negócio Digital com 1000 PLRs Exclusivos!           
@@ -570,7 +570,7 @@
     </div>
    
     <div class="img51">
-        <img src="{{asset("./img/51.jpeg")}}" alt="" width="150">
+        <img src="./img/51.jpeg" alt="" width="150">
     </div>
     <div class="texto51">
         <h5 class="abertura51">Receitas de Smoothies Nutritivos           
@@ -581,7 +581,7 @@
     </div>
    
     <div class="img52">
-        <img src="{{asset("./img/52.jpeg")}}" alt="" width="150">
+        <img src="./img/52.jpeg" alt="" width="150">
     </div>
     <div class="texto52">
         <h5 class="abertura52">Técnicas de Meditação Avançadas
@@ -592,7 +592,7 @@
     </div>
    
     <div class="img53">
-        <img src="{{asset("./img/53.jpeg")}}" alt="" width="150">
+        <img src="./img/53.jpeg" alt="" width="150">
     </div>
     <div class="texto53">
         <h5 class="abertura53">Guia de Organização Pessoal
@@ -608,7 +608,8 @@
 
 
     
-    
+
+
 
 </div>
 

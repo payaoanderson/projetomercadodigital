@@ -22,4 +22,6 @@ class SiteController extends Controller
     public function template(){
       return view('template');
     }
+
+    
 }

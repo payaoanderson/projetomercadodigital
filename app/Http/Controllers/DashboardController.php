@@ -15,4 +15,12 @@ class DashboardController extends Controller
 
         return view('admin.dashboard', compact('totalProdutos'));
     }
+
+
+    public function admin(){
+
+        $totalProdutos = Produto::count();
+        return view('admin.dashboard', compact('totalProdutos'));
+        
+    }
 }
