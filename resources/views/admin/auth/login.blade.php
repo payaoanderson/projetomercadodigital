@@ -6,7 +6,7 @@
 
     <div class="card">
         <div class="card-body">
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('login') }}" id="loginForm">
                 @csrf
 
                 <!-- Campo de E-mail -->
@@ -35,9 +35,12 @@
                     </div>
                 @endif
 
-                <!-- Botão de Login -->
+                <!-- Botão de Login com Loading Spinner -->
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary" id="loginButton">
+                        <span id="buttonText">Login</span>
+                        <span id="loadingSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                    </button>
                 </div>
 
                 <!-- Erro ao usuário não existir -->
@@ -51,7 +54,7 @@
     </div>
 </div>
 
-<!-- JavaScript para Alternar Visibilidade da Senha -->
+<!-- JavaScript para Alternar Visibilidade da Senha e Exibir Loading Spinner -->
 <script>
     function togglePasswordVisibility() {
         const passwordInput = document.getElementById('password');
@@ -66,5 +69,16 @@
             passwordIcon.classList.add('fa-eye');
         }
     }
+
+    // Exibe o spinner de carregamento no botão de login
+    document.getElementById('loginForm').addEventListener('submit', function() {
+        const loginButton = document.getElementById('loginButton');
+        const buttonText = document.getElementById('buttonText');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+
+        loginButton.disabled = true;
+        buttonText.textContent = 'Carregando...';
+        loadingSpinner.classList.remove('d-none');
+    });
 </script>
 @endsection
