@@ -130,6 +130,6 @@
             });
         }
     </script>
-    
+    @include('includes.cookie')
 </body>
 </html>

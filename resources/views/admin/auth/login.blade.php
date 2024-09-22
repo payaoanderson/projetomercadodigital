@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mt-4">
-    <h2 class="mb-4">Login</h2>
+    <h2 class="mb-4 text-center">Login</h2>
 
     <div class="card">
         <div class="card-body">
@@ -35,20 +35,20 @@
                     </div>
                 @endif
 
-                <!-- Botão de Login com Loading Spinner -->
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary" id="loginButton">
-                        <span id="buttonText">Login</span>
-                        <span id="loadingSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
-                    </button>
-                </div>
-
                 <!-- Erro ao usuário não existir -->
                 @if ($errors->has('email'))
                     <div class="alert alert-danger mt-2">
                         {{ $errors->first('email') }}
                     </div>
                 @endif
+
+
+                <div class="mt-4">
+                    <button type="button" class="btn btn-primary btn-lg btn-block" style="padding: 5px" id="loginButton" onclick="submitLoginForm()" style="height: 100px; font-size: 24px; display: flex; justify-content: center; align-items: center; padding: 10px;">
+                        <span id="buttonText">Login</span>
+                        <span id="loadingSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                    </button>
+                </div>
             </form>
         </div>
     </div>
@@ -70,15 +70,23 @@
         }
     }
 
-    // Exibe o spinner de carregamento no botão de login
-    document.getElementById('loginForm').addEventListener('submit', function() {
+    // Função para submeter o formulário ao clicar no botão fora do form
+    function submitLoginForm() {
+        const loginForm = document.getElementById('loginForm');
         const loginButton = document.getElementById('loginButton');
         const buttonText = document.getElementById('buttonText');
         const loadingSpinner = document.getElementById('loadingSpinner');
 
+        // Exibe o spinner de carregamento no botão de login
         loginButton.disabled = true;
         buttonText.textContent = 'Carregando...';
         loadingSpinner.classList.remove('d-none');
-    });
+
+        // Submete o formulário
+        loginForm.submit();
+    }
 </script>
+
+
+@include('includes.cookie')
 @endsection

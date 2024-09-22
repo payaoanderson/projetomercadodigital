@@ -74,5 +74,4 @@ Para mais informações sobre nossa política de privacidade ou para exercer seu
 </body>
 
 </html>
-
-@include("includes.cookie")
+@include("includes.cookie") 
