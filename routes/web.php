@@ -21,8 +21,8 @@ Route::get('/template', [SiteController::class, 'template'])->name('template');
 
 Route::middleware('auth')->group(function () {
     // Rotas protegidas aqui
-    Route::get('/admin', [DashboardController::class, 'admin'])->name('admin');
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/dashboard', [UserController::class, 'dashboard'])->name('admin.dashboard');
 
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
     Route::get('/users/create', [UserController::class, 'create'])->name('users.create');

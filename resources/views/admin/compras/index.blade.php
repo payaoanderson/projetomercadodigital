@@ -42,6 +42,6 @@
         </tbody>
     </table>
 
-    {{ $compras->links() }}
+    {{ $compras->links("pagination::numeric") }}
 </div>
 @endsection

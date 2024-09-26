@@ -3,25 +3,37 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Produto;
+use App\Models\AccessLog;
+use App\Models\Venda;
+use App\Models\Compra;
+use App\Models\Relatorio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    // Método para exibir o dashboard com a contagem de usuários
-    public function dashboard() {
-        $totalUsuarios = User::count(); // Corrigido para $totalUsuarios
-        return view('admin.dashboard', compact('totalUsuarios')); // Certifique-se de que a view existe e está correta
+    // Dashboard da área administrativa
+    public function dashboard()
+    {
+        $totalUsuarios = User::count();
+        $totalProdutos = Produto::count();
+        $totalVenda = Venda::count();
+        $totalRelatorio = Relatorio::count();
+        $totalCompra = Compra::count();
+        $totalAcessos = AccessLog::count();
+
+        return view('admin.dashboard', compact('totalUsuarios', 'totalProdutos', 'totalAcessos', 'totalVenda', 'totalCompra', 'totalRelatorio'));
     }
 
     // Método para listar usuários com paginação
     public function index()
     {
-        $users = User::paginate(10); // Retorna 10 usuários por página
+        $users = User::paginate(10); // Exibe 10 usuários por página
         return view('admin.users.index', compact('users'));
     }
 
-    // Método para exibir o formulário de criação de usuários
+    // Método para exibir o formulário de criação de usuário
     public function create()
     {
         return view('admin.users.create');
@@ -30,46 +42,53 @@ class UserController extends Controller
     // Método para armazenar um novo usuário
     public function store(Request $request)
     {
+        // Validação dos dados do formulário de criação de usuário
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users', // Valida email único
+            'email' => 'required|email|unique:users', // O email deve ser único na tabela de usuários
             'password' => 'required|string|min:8|confirmed', // Confirmação de senha
         ]);
 
+        // Criação de um novo usuário com hash de senha
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password), // Hash da senha
+            'password' => Hash::make($request->password),
         ]);
 
+        // Redireciona com mensagem de sucesso após a criação
         return redirect()->route('users.index')->with('success', 'Usuário criado com sucesso.');
     }
 
-    // Método para editar um usuário
+    // Método para exibir o formulário de edição de usuário
     public function edit(User $user)
     {
         return view('admin.users.edit', compact('user'));
     }
 
-    // Método para atualizar um usuário
+    // Método para atualizar um usuário existente
     public function update(Request $request, User $user)
     {
+        // Validação dos dados atualizados
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email,' . $user->id, // Valida o email exceto o atual
-            'password' => 'nullable|string|min:8|confirmed', // A senha é opcional na atualização
+            'email' => 'required|email|unique:users,email,' . $user->id, // Valida o email, exceto o do próprio usuário
+            'password' => 'nullable|string|min:8|confirmed', // A senha é opcional
         ]);
 
+        // Atualiza os campos do usuário
         $user->name = $request->name;
         $user->email = $request->email;
 
-        // Verifica se a senha foi preenchida e atualiza
+        // Verifica se a senha foi preenchida para atualizar
         if ($request->filled('password')) {
             $user->password = Hash::make($request->password);
         }
 
-        $user->save(); // Salva as alterações no banco
+        // Salva as alterações no banco de dados
+        $user->save();
 
+        // Redireciona com mensagem de sucesso após a atualização
         return redirect()->route('users.index')->with('success', 'Usuário atualizado com sucesso.');
     }
 
