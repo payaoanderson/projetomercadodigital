@@ -1,21 +1,25 @@
 <?php
-
 namespace App\Http\Controllers\Api;
-use App\Http\Controllers\Controller;
 
+use App\Http\Controllers\Controller;
 use App\Models\Produto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ApiProdutoController extends Controller
 {
-    // Listar todos os produtos com paginação
+    /**
+     * Listar todos os produtos com paginação.
+     */
     public function index()
     {
         $produtos = Produto::paginate(10);
         return response()->json($produtos, 200);
     }
 
-    // Exibir detalhes de um único produto
+    /**
+     * Exibir detalhes de um único produto.
+     */
     public function show($id)
     {
         $produto = Produto::find($id);
@@ -27,30 +31,32 @@ class ApiProdutoController extends Controller
         return response()->json($produto, 200);
     }
 
-    // Criar um novo produto
+    /**
+     * Criar um novo produto.
+     */
     public function store(Request $request)
     {
         $request->validate([
-            'nome' => 'required',
+            'nome' => 'required|string|max:255',
             'preco' => 'required|numeric',
-            'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validação da imagem
+            'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $data = $request->all();
 
-        // Processa o upload da imagem
         if ($request->hasFile('imagem')) {
-            $imageName = time() . '.' . $request->imagem->extension();
-            $request->imagem->move(public_path('images'), $imageName);
-            $data['imagem'] = $imageName;
+            $path = $request->file('imagem')->store('produtos', 'public');
+            $data['imagem'] = $path;
         }
 
         $produto = Produto::create($data);
 
-        return response()->json($produto, 201); // 201 = Created
+        return response()->json($produto, 201);
     }
 
-    // Atualizar um produto existente
+    /**
+     * Atualizar um produto existente.
+     */
     public function update(Request $request, $id)
     {
         $produto = Produto::find($id);
@@ -60,32 +66,42 @@ class ApiProdutoController extends Controller
         }
 
         $request->validate([
-            'nome' => 'required',
+            'nome' => 'required|string|max:255',
             'preco' => 'required|numeric',
-            'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validação da imagem
+            'imagem' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $data = $request->all();
 
-        // Processa o upload da imagem, se for fornecida
         if ($request->hasFile('imagem')) {
-            $imageName = time() . '.' . $request->imagem->extension();
-            $request->imagem->move(public_path('images'), $imageName);
-            $data['imagem'] = $imageName;
+            // Remove a imagem antiga, se existir
+            if ($produto->imagem && Storage::disk('public')->exists($produto->imagem)) {
+                Storage::disk('public')->delete($produto->imagem);
+            }
+
+            $path = $request->file('imagem')->store('produtos', 'public');
+            $data['imagem'] = $path;
         }
 
         $produto->update($data);
 
-        return response()->json($produto, 200); // 200 = OK
+        return response()->json($produto, 200);
     }
 
-    // Deletar um produto
+    /**
+     * Deletar um produto.
+     */
     public function destroy($id)
     {
         $produto = Produto::find($id);
 
         if (!$produto) {
             return response()->json(['error' => 'Produto não encontrado'], 404);
+        }
+
+        // Remove a imagem associada, se existir
+        if ($produto->imagem && Storage::disk('public')->exists($produto->imagem)) {
+            Storage::disk('public')->delete($produto->imagem);
         }
 
         $produto->delete();
